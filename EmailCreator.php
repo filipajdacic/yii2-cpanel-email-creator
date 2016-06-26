@@ -5,51 +5,45 @@ namespace filipajdacic\cpanelemailcreator;
 use yii\base\Component;
 use \Exception;
 
-use vendor\xmlapi;
-
+use xmlapi\xmlapi as cPanelAPI;
 /**
  * This is just an example.
  */
 class EmailCreator extends Component
 {
     
-
 	/*
 	 IP address of a server where you have cPanel Installed.
 	*/
 
-	private $ip;
+	public $ip;
 
 	/* 
 	cPanel Port / usually is 2083 or 2086
 	*/
 
-	private $port;
+	public $port;
 
 	/* 
 	cPanel account username
 	*/
 
-	private $cpanel_username;
+	public $cpanel_username;
 
 	/*
 	cPanel account password
 	*/
 
-	private $cpanel_password;
+	public $cpanel_password;
 
 
+	public $api;
 
     public function init()
     {
         parent::init();
-
-		$this->ip = $ip;
-		$this->cpanel_username = $cpanel_username;
-		$this->cpanel_password = $cpanel_password;
-		$this->port = $port;
+        $this->api = $this->__initApi();
     }
-
 
 	protected function __initApi() {
 		$xmlapi = new xmlapi($this->ip);
@@ -61,7 +55,7 @@ class EmailCreator extends Component
 
 
 	public function createNewAccount($domain, $username, $password, $quota) {
-		$api = $this->__initApi();
+		$api = $this->api;
 		$call = array(
 			'domain' => $domain, 
 			'email' => $username, 
@@ -73,7 +67,7 @@ class EmailCreator extends Component
 		if($result->data->result == 1) {
 			return true;
 		} else {
-			throw new CHttpException(404, 'E-mail account is not created: '.$result->data->reason);
+			return $result->data->reason;
 		}
 	}
 
