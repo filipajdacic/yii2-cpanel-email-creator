@@ -40,7 +40,7 @@ Once the extension is installed, simply use it in your code by  in config:
 );
 ```
 
-After you have configure component, you can use it in this way:
+After you have configured a component, you can use it in this way:
 ```php
 
 $domain = "mywebsite.com";
