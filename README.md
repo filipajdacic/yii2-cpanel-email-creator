@@ -2,6 +2,16 @@ cPanel Email Account Creator Extension
 ======================================
 With this extension you will be able to easly programatically create,update,delete cPanel email accounts from your yii2 application.
 
+**With this component you are able to:**
+
+-   Create new mail accounts
+
+-   Change existing account disk quota
+
+-   Change existing accounts their passwords
+
+-   Delet accounts
+
 Installation
 ------------
 
@@ -71,6 +81,7 @@ echo $result;
 Note that password strong policy is defined in WHM (Web Host Manager).
 
 2. Change existing email account password:
+
 ```php
 
 $domain = "mywebsite.com";
@@ -94,6 +105,7 @@ echo $result;
 ```
 
 3. Change existing email account disk quota:
+
 ```php
 
 $domain = "mywebsite.com";
@@ -117,6 +129,7 @@ echo $result;
 ```
 
 4. Deleting existing email account
+
 ```php
 
 $domain = "mywebsite.com";
