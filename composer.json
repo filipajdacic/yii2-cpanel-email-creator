@@ -1,0 +1,21 @@
+{
+    "name": "filipajdacic/yii2-cpanel-email-creator",
+    "description": "With this extension you will be able to easly to create cPanel email account from your yii2 application.",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"," cpanel"," email"," create"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Filip Ajdacic",
+            "email": "ajdasoft@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "filipajdacic\\cpanelemailcreator\\": ""
+        }
+    }
+}
