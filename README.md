@@ -35,7 +35,7 @@ to the require section of your `composer.json` file.
 Usage
 -----
 
-Once the extension is installed, simply use it in your code by  in config:
+Once the extension is installed, simply use it in your code by putting this in your config:
 ```php
 'components' => array(
     ...
