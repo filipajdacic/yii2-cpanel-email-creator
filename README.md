@@ -52,7 +52,7 @@ Once the extension is installed, simply use it in your code by  in config:
 
 After you have configured a component, you can use it in this way:
 
-1. Create a new mail account:
+**1. Create a new mail account:**
 
 ```php
 
@@ -80,7 +80,7 @@ echo $result;
 
 Note that password strong policy is defined in WHM (Web Host Manager).
 
-2. Change existing email account password:
+**2. Change existing email account password:**
 
 ```php
 
@@ -104,7 +104,7 @@ if($change_password_result) {
 echo $result;
 ```
 
-3. Change existing email account disk quota:
+**3. Change existing email account disk quota:**
 
 ```php
 
@@ -128,7 +128,7 @@ echo $result;
 
 ```
 
-4. Deleting existing email account
+**4. Deleting existing email account**
 
 ```php
 
