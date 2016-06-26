@@ -151,5 +151,13 @@ echo $result;
 
 ```
 
+Resources
+------------
+
+[Yii Framework Extension Page](http://www.yiiframework.com/extension/yii2-cpanel-email-creator/)
+
+
+
+
 
 If you have any questions, feel free to ask!
