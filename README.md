@@ -27,5 +27,21 @@ Usage
 
 Once the extension is installed, simply use it in your code by  :
 
+
+Usage
+-----
+
+Once the extension is installed, simply use it in your code by  in config:
 ```php
-<?= \filipajdacic\cpanelemailcreator\AutoloadExample::widget(); ?>```
+'components' => array(
+    ...
+    'cpanelemailcreator' => array(
+        'class' => 'filipajdacic\cpanelemailcreator\EmailCreator',
+        'ip' => 'YOUR_CPANEL_SERVER/HOST_IP_ADDRESS',
+        'port' => '2083', // it can be also 2086
+        'cpanel_username' => 'YOUR_CPANEL_USERNAME',
+        'cpanel_password' => 'YOUR_CPANEL_PASSWORD'
+    ),
+    ...
+);
+```
